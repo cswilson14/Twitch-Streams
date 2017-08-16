@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch.tv Streamers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+  <button id="collapsebutton" class="navbar-toggler navbar-toggler-right btn btn-outline-success" type="button" data-toggle="collapse" data-target="#collapse-bar" aria-controls="collapse-bar" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;height:40px;">
+    <i id="collapseicon" class="fa fa-search" aria-hidden="true"></i>
+  </button>
+  <a class="navbar-brand" href="#">Twitch.tv Streams</a>
+
+  <div class="collapse navbar-collapse" id="collapse-bar">
+    <ul class="navbar-nav mr-auto"></ul>
+    <form class="form-inline row my-0" style="" autocomplete="off">
+      <div class="col-12 col-sm-6 text-left text-md-right" style="color: white;font-size:17px">Search By: 
+        <span id="searchbystream" class="selected search-option">Live Now</span> |
+        <span id="searchbychannel" class="search-option">Channel</span>
+      </div>
+      <div class="col-12 col-sm-6" style="">
+        <input id="searchbox" class="form-control" type="text" placeholder="search channels" style="width: calc(100% - 55px);display:inline;">
+        <button id="searchbutton" class="btn btn-outline-success" type="button" style="width: 50px;display:inline;"><i id="searchbutton-icon" class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+    </form>
+  </div>
+</nav>
+
+
+<div id="resultsbox" class="results-box">
+  <!-- SEARCH RESULTS BOX -->
+</div>
+
+<!-- END NAVBAR -->
+<div id="player" class="player-border">
+</div>
+<div class="text-center">
+  <!--button class="btn btn-warning">Hide Stream</button-->
+</div>
+<div id="stream-options" class="text-center hidden">
+  <h4><span id="hide-stream-button" style="cursor:pointer;">Hide Stream</span><span id="pin-channel-text">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span id="pin-channel-button" style="cursor:pointer;">Pin Channel</span></span></h4>
+    
+<hr>
+  </div>
+
+<div class="container">
+  <h1 class="section-title">Pinned Channels</h1>
+  <div id="loading-pins-icon" class="text-center"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true"></i></div>
+  <div id="pinned-channels-section" style="display:none;">
+  <p id="no-pinned-channels-text" class="text-center"><br>You have no pinned channels.</p>
+  <div id="pinned-channels" class="row">
+  </div>
+  </div>
+</div>
+  <script src='https://embed.twitch.tv/embed/v1.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script src='https://rubaxa.github.io/Sortable/Sortable.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
